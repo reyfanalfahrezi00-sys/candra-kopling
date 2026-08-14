@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIUU STORE — Katalog APK Premium &amp; Suntik Sosmed</title>
+    <meta name="description" content="FIUU STORE - Katalog APK Premium original dan jasa suntik sosial media. Harga mulai Rp4.000an." />
+
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ============================================================
+           ALL CSS — TEMA BIRU
+           ============================================================ */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --primary-light: #4dabf7;
+            --secondary: #0d47a1;
+            --accent: #ffbe0b;
+            --dark: #0a0a1a;
+            --darker: #05050f;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.10);
+            --text: #f0f0f5;
+            --text-muted: #a8a8b8;
+            --radius: 16px;
+            --shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.7);
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--darker);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== UTILITY ===== */
+        .section-tag {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 4px 18px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradShift 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .section-sub {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 560px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 60px;
+            border: none;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 36px rgba(26, 115, 232, 0.45);
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #fff;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 60px;
+            border: none;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        .btn-wa:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #fff;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 60px;
+            border: 2px solid var(--glass-border);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* ===== ANIMATED BG — GRADASI BIRU LEMBUT ===== */
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+            background: radial-gradient(ellipse at 70% 30%, rgba(26, 115, 232, 0.06), transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(13, 71, 161, 0.06), transparent 60%),
+                        radial-gradient(ellipse at 50% 50%, rgba(255, 190, 11, 0.02), transparent 70%);
+        }
+
+        /* ===== CANVAS PARTICLES ===== */
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 14px 0;
+            transition: var(--transition);
+            backdrop-filter: blur(0px);
+        }
+        .navbar.scrolled {
+            background: rgba(5, 5, 15, 0.88);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 10px 0;
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 2;
+        }
+        .nav-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #fff;
+            animation: pulseIcon 3s infinite alternate;
+            box-shadow: 0 0 20px rgba(26, 115, 232, 0.15);
+        }
+        @keyframes pulseIcon {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+            100% {
+                transform: scale(1.05) rotate(3deg);
+            }
+        }
+        .nav-logo span {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradShift 4s ease-in-out infinite alternate;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+            z-index: 1000;
+        }
+        .hamburger span {
+            width: 26px;
+            height: 3px;
+            background: #fff;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 110px 0 50px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradShift 5s ease-in-out infinite alternate;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 28px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .channel-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(37, 211, 102, 0.12);
+            border: 1px solid rgba(37, 211, 102, 0.25);
+            padding: 8px 20px 8px 16px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #25D366;
+            transition: var(--transition);
+            margin-top: 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .channel-badge:hover {
+            background: rgba(37, 211, 102, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.15);
+        }
+        .channel-badge i {
+            font-size: 1.1rem;
+        }
+
+        /* ===== KATEGORI & PRODUK ===== */
+        .section-catalog {
+            position: relative;
+            z-index: 1;
+            padding: 40px 0 80px;
+        }
+
+        .category-block {
+            margin-bottom: 48px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+        .category-block:nth-child(1) { animation-delay: 0.05s; }
+        .category-block:nth-child(2) { animation-delay: 0.10s; }
+        .category-block:nth-child(3) { animation-delay: 0.15s; }
+        .category-block:nth-child(4) { animation-delay: 0.20s; }
+        .category-block:nth-child(5) { animation-delay: 0.25s; }
+        .category-block:nth-child(6) { animation-delay: 0.30s; }
+        .category-block:nth-child(7) { animation-delay: 0.35s; }
+        .category-block:nth-child(8) { animation-delay: 0.40s; }
+        .category-block:nth-child(9) { animation-delay: 0.45s; }
+        .category-block:nth-child(10) { animation-delay: 0.50s; }
+        .category-block:nth-child(11) { animation-delay: 0.55s; }
+        .category-block:nth-child(12) { animation-delay: 0.60s; }
+        .category-block:nth-child(13) { animation-delay: 0.65s; }
+        .category-block:nth-child(14) { animation-delay: 0.70s; }
+        .category-block:nth-child(15) { animation-delay: 0.75s; }
+        .category-block:nth-child(16) { animation-delay: 0.80s; }
+        .category-block:nth-child(17) { animation-delay: 0.85s; }
+        .category-block:nth-child(18) { animation-delay: 0.90s; }
+        .category-block:nth-child(19) { animation-delay: 0.95s; }
+        .category-block:nth-child(20) { animation-delay: 1.00s; }
+        .category-block:nth-child(21) { animation-delay: 1.05s; }
+        .category-block:nth-child(22) { animation-delay: 1.10s; }
+        .category-block:nth-child(23) { animation-delay: 1.15s; }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+        }
+        .category-header .cat-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            flex-shrink: 0;
+            animation: floatIcon 4s infinite alternate ease-in-out;
+            box-shadow: 0 4px 16px rgba(26, 115, 232, 0.15);
+        }
+        @keyframes floatIcon {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-6px);
+            }
+        }
+        .category-header h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .category-header h2 span {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 0.85rem;
+            margin-left: 8px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+        }
+
+        .product-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 16px 16px 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.08), rgba(13, 71, 161, 0.08));
+            opacity: 0;
+            transition: var(--transition);
+            border-radius: var(--radius);
+            pointer-events: none;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -12px rgba(26, 115, 232, 0.3);
+        }
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        .product-card:active {
+            transform: scale(0.97);
+        }
+
+        .product-card .product-name {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .product-card .product-name .badge {
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 1px 8px;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+            animation: glowBadge 2s infinite alternate;
+        }
+        @keyframes glowBadge {
+            0% {
+                box-shadow: 0 0 4px rgba(255, 190, 11, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 12px rgba(255, 190, 11, 0.7);
+            }
+        }
+        .product-card .product-detail {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+        .product-card .product-price {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: #fff;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .product-card .product-price .currency {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .product-card .btn-wa {
+            align-self: flex-start;
+            font-size: 0.7rem;
+            padding: 5px 14px;
+            margin-top: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-card .garansi-tag {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: #4ade80;
+            background: rgba(74, 222, 128, 0.12);
+            padding: 1px 10px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 4px;
+            letter-spacing: 0.2px;
+            position: relative;
+            z-index: 2;
+            animation: pulseGreen 2s infinite;
+        }
+        @keyframes pulseGreen {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* ===== CTA BOTTOM ===== */
+        .section-cta {
+            position: relative;
+            z-index: 1;
+            padding: 50px 0 70px;
+            text-align: center;
+        }
+        .cta-box {
+            background: linear-gradient(145deg, rgba(26, 115, 232, 0.06), rgba(13, 71, 161, 0.06));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            backdrop-filter: blur(8px);
+            transition: var(--transition);
+        }
+        .cta-box:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -12px rgba(26, 115, 232, 0.15);
+        }
+        .cta-box h2 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .cta-box h2 span {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradShift 4s ease-in-out infinite alternate;
+        }
+        .cta-box p {
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto 24px;
+            font-size: 0.95rem;
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            transform: scale(0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #scrollTopBtn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        #scrollTopBtn:hover {
+            transform: scale(1.1) translateY(-4px);
+            box-shadow: 0 12px 32px rgba(26, 115, 232, 0.6);
+        }
+
+        /* ===== MUSIC TOGGLE BUTTON ===== */
+        #musicToggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.4);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #musicToggle:hover {
+            transform: scale(1.1) rotate(8deg);
+            box-shadow: 0 12px 32px rgba(26, 115, 232, 0.6);
+        }
+        #musicToggle.playing {
+            animation: pulseMusic 1.5s infinite alternate;
+        }
+        @keyframes pulseMusic {
+            0% {
+                box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.4);
+            }
+            100% {
+                box-shadow: 0 0 0 12px rgba(26, 115, 232, 0);
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 30px 0 24px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .footer .copy {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .footer .copy strong {
+            color: #fff;
+        }
+        .footer .socials {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer .socials a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+        .footer .socials a:hover {
+            color: #fff;
+            transform: translateY(-3px) scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .footer .socials a.instagram:hover {
+            color: #E4405F;
+            background: rgba(228, 64, 95, 0.15);
+            box-shadow: 0 0 20px rgba(228, 64, 95, 0.2);
+        }
+        .footer .socials a.whatsapp-channel:hover {
+            color: #25D366;
+            background: rgba(37, 211, 102, 0.15);
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 260px;
+                height: 100vh;
+                background: rgba(5, 5, 15, 0.96);
+                backdrop-filter: blur(24px);
+                flex-direction: column;
+                justify-content: center;
+                padding: 40px 28px;
+                transition: var(--transition);
+                border-left: 1px solid var(--glass-border);
+                gap: 20px;
+            }
+            .nav-links.open {
+                right: 0;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            .product-card {
+                padding: 12px 12px 12px;
+            }
+            .product-card .product-name {
+                font-size: 0.75rem;
+            }
+            .product-card .product-price {
+                font-size: 0.9rem;
+            }
+            .product-card .product-detail {
+                font-size: 0.65rem;
+            }
+            .product-card .btn-wa {
+                font-size: 0.6rem;
+                padding: 4px 10px;
+            }
+            .category-header h2 {
+                font-size: 1.1rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cta-box {
+                padding: 28px 18px;
+            }
+            #scrollTopBtn {
+                width: 42px;
+                height: 42px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            #musicToggle {
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+                bottom: 20px;
+                left: 20px;
+            }
+            .footer .socials a {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .product-card {
+                padding: 10px 10px 10px;
+            }
+            .product-card .product-name {
+                font-size: 0.7rem;
+            }
+            .product-card .product-price {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== BG GLOW — BIRU LEMBUT ===== -->
+    <div class="bg-glow"></div>
+
+    <!-- ===== CANVAS PARTICLES ===== -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+                FIUU <span>STORE</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#catalog">Katalog</a></li>
+                <li><a href="https://wa.me/+6285113000221" target="_blank"><i class="fab fa-whatsapp"></i> WA</a></li>
+                <li><a href="https://www.instagram.com/fiu_05_03?igsh=MXBmNnp5MHJtNjd2eQ==" target="_blank"><i class="fab fa-instagram"></i> IG</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-tag"><i class="fas fa-store"></i> Katalog Produk</span>
+                <h1>APK Premium &amp; <span class="highlight">Suntik Sosmed</span></h1>
+                <p>Semua produk original &amp; bergaransi. Klik produk untuk order via WhatsApp.</p>
+                <div class="hero-actions">
+                    <a href="#catalog" class="btn-primary"><i class="fas fa-list"></i> Lihat Katalog</a>
+                    <a href="https://wa.me/+6285113000221" target="_blank" class="btn-primary" style="background: #25D366; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);">
+                        <i class="fab fa-whatsapp"></i> Hubungi Admin
+                    </a>
+                    <a href="https://www.instagram.com/fiu_05_03?igsh=MXBmNnp5MHJtNjd2eQ==" target="_blank" class="btn-outline" style="border-color: #E4405F;">
+                        <i class="fab fa-instagram" style="color: #E4405F;"></i> Instagram
+                    </a>
+                </div>
+                <a href="https://whatsapp.com/channel/0029VbCs2NEB4hdbkjIKgf26" target="_blank" class="channel-badge">
+                    <i class="fab fa-whatsapp"></i> Gabung Channel WhatsApp
+                    <i class="fas fa-arrow-right" style="font-size: 0.7rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KATALOG ===== -->
+    <section class="section-catalog" id="catalog">
+        <div class="container">
+
+            <!-- ===== CHAT GPT ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-robot"></i></div>
+                    <h2>CHAT GPT <span>AI Premium</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('CHAT GPT', 'Privat 1 bulan', 'Rp65.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi ChatGPT Premium</div>
+                        <div class="product-price">Rp65.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CHAT GPT', 'Shering 1 bulan', 'Rp30.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing ChatGPT Premium</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CHAT GPT', 'Shering 7 hari', 'Rp17.000')">
+                        <div class="product-name">Shering 7 hari <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing ChatGPT Premium</div>
+                        <div class="product-price">Rp17.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CAPCUT ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-video"></i></div>
+                    <h2>CAPCUT <span>Pro Editor</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('CAPCUT', 'Privat 7 hari', 'Rp20.000')">
+                        <div class="product-name">Privat 7 hari <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi CapCut Pro</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CAPCUT', 'Shering 7 hari', 'Rp17.000')">
+                        <div class="product-name">Shering 7 hari <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing CapCut Pro</div>
+                        <div class="product-price">Rp17.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CAPCUT', 'Shering 1 bulan', 'Rp30.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing CapCut Pro</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CAPCUT', 'Privat 1 bulan', 'Rp40.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi CapCut Pro</div>
+                        <div class="product-price">Rp40.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== VIU ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-film"></i></div>
+                    <h2>VIU <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('VIU', 'Privat 1 bulan', 'Rp10.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Viu Premium</div>
+                        <div class="product-price">Rp10.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIU', 'Privat 2 bulan', 'Rp15.000')">
+                        <div class="product-name">Privat 2 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Viu Premium</div>
+                        <div class="product-price">Rp15.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIU', 'Privat 3 bulan', 'Rp20.000')">
+                        <div class="product-name">Privat 3 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Viu Premium</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIU', 'Privat 6 bulan', 'Rp35.000')">
+                        <div class="product-name">Privat 6 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Viu Premium</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIU', 'Privat 1 tahun', 'Rp60.000')">
+                        <div class="product-name">Privat 1 tahun <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Viu Premium</div>
+                        <div class="product-price">Rp60.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== APPLE MUSIC ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fab fa-apple"></i></div>
+                    <h2>APPLE MUSIC <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('APPLE MUSIC', '1 bulan', 'Rp20.000')">
+                        <div class="product-name">1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Apple Music Premium</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== DISNEY ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-star"></i></div>
+                    <h2>DISNEY <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('DISNEY', 'Shering 1 bulan', 'Rp35.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Disney+</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('DISNEY', 'Privat 1 bulan', 'Rp80.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Disney+</div>
+                        <div class="product-price">Rp80.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ALIGHT MOTION ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-pen-fancy"></i></div>
+                    <h2>ALIGHT MOTION <span>Editor Pro</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('ALIGHT MOTION', 'Privat 1 tahun', 'Rp20.000')">
+                        <div class="product-name">Privat 1 tahun <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Alight Motion Pro</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== ZOOM MEET ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-video"></i></div>
+                    <h2>ZOOM MEET <span>Pro</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('ZOOM MEET', 'Pro 14 hari', 'Rp20.000')">
+                        <div class="product-name">Pro 14 hari <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Zoom Pro</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== IQIYI ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-tv"></i></div>
+                    <h2>IQIYI <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Standar Shering 1 bulan', 'Rp15.000')">
+                        <div class="product-name">Standar Shering 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Standar</div>
+                        <div class="product-price">Rp15.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Standar Shering 2 bulan', 'Rp25.000')">
+                        <div class="product-name">Standar Shering 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Standar</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Standar Shering 3 bulan', 'Rp35.000')">
+                        <div class="product-name">Standar Shering 3 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Standar</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Standar Shering 4 bulan', 'Rp45.000')">
+                        <div class="product-name">Standar Shering 4 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Standar</div>
+                        <div class="product-price">Rp45.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Standar Shering 1 tahun', 'Rp125.000')">
+                        <div class="product-name">Standar Shering 1 thn <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Standar</div>
+                        <div class="product-price">Rp125.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Premium Shering 1 bulan', 'Rp20.000')">
+                        <div class="product-name">Premium Shering 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Premium</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Premium Shering 1 tahun', 'Rp185.000')">
+                        <div class="product-name">Premium Shering 1 thn <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing IQIYI Premium</div>
+                        <div class="product-price">Rp185.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Privat 1 bulan', 'Rp35.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi IQIYI</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('IQIYI', 'Privat 1 tahun', 'Rp400.000')">
+                        <div class="product-name">Privat 1 tahun <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi IQIYI</div>
+                        <div class="product-price">Rp400.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== NETFLIX ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-tv"></i></div>
+                    <h2>NETFLIX <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 1 bulan', 'Rp25.000')">
+                        <div class="product-name">1 profile 2 user 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 14 hari', 'Rp20.000')">
+                        <div class="product-name">1 profile 2 user 14 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 7 hari', 'Rp15.000')">
+                        <div class="product-name">1 profile 2 user 7 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp15.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 3 hari', 'Rp13.000')">
+                        <div class="product-name">1 profile 2 user 3 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp13.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 2 hari', 'Rp10.000')">
+                        <div class="product-name">1 profile 2 user 2 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp10.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 3 bulan', 'Rp65.000')">
+                        <div class="product-name">1 profile 2 user 3 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp65.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 2 user 2 bulan', 'Rp45.000')">
+                        <div class="product-name">1 profile 2 user 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix sharing 2 user</div>
+                        <div class="product-price">Rp45.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Private Anti Limit Screen 1 bulan', 'Rp95.000')">
+                        <div class="product-name">Private Anti Limit 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix private anti limit</div>
+                        <div class="product-price">Rp95.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Semi Privat 3 bulan', 'Rp90.000')">
+                        <div class="product-name">Semi Privat 3 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix semi private</div>
+                        <div class="product-price">Rp90.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Semi Privat 2 bulan', 'Rp65.000')">
+                        <div class="product-name">Semi Privat 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix semi private</div>
+                        <div class="product-price">Rp65.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Semi Privat 1 bulan', 'Rp35.000')">
+                        <div class="product-name">Semi Privat 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix semi private</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Semi Privat 14 hari', 'Rp30.000')">
+                        <div class="product-name">Semi Privat 14 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix semi private</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', 'Semi Privat 7 hari', 'Rp25.000')">
+                        <div class="product-name">Semi Privat 7 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix semi private</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 1 user 3 bulan', 'Rp80.000')">
+                        <div class="product-name">1 profile 1 user 3 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix 1 user</div>
+                        <div class="product-price">Rp80.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 1 user 2 bulan', 'Rp55.000')">
+                        <div class="product-name">1 profile 1 user 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix 1 user</div>
+                        <div class="product-price">Rp55.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 1 user 1 bulan', 'Rp30.000')">
+                        <div class="product-name">1 profile 1 user 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix 1 user</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('NETFLIX', '1 profile 1 user 14 hari', 'Rp25.000')">
+                        <div class="product-name">1 profile 1 user 14 hr <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Netflix 1 user</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== PRIME VIDEO ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fab fa-amazon"></i></div>
+                    <h2>PRIME VIDEO <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('PRIME VIDEO', 'Privat 1 bulan', 'Rp25.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Prime Video</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== WE TV ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-tv"></i></div>
+                    <h2>WE TV <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('WE TV', 'Shering 6 user 1 bulan', 'Rp15.000')">
+                        <div class="product-name">Shering 6 user 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing WE TV</div>
+                        <div class="product-price">Rp15.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('WE TV', 'Shering 3 user 1 bulan', 'Rp30.000')">
+                        <div class="product-name">Shering 3 user 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing WE TV</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('WE TV', 'Privat 1 bulan', 'Rp35.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi WE TV</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CANVA ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h2>CANVA <span>Pro Design</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('CANVA', '1 bulan', 'Rp7.000')">
+                        <div class="product-name">1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Canva Pro</div>
+                        <div class="product-price">Rp7.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CANVA', '2 bulan', 'Rp10.000')">
+                        <div class="product-name">2 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Canva Pro</div>
+                        <div class="product-price">Rp10.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CANVA', '3 bulan', 'Rp16.000')">
+                        <div class="product-name">3 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Canva Pro</div>
+                        <div class="product-price">Rp16.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CANVA', '6 bulan', 'Rp30.000')">
+                        <div class="product-name">6 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Canva Pro</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('CANVA', '12 bulan', 'Rp60.000')">
+                        <div class="product-name">12 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Canva Pro</div>
+                        <div class="product-price">Rp60.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== BSTATION ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-headphones"></i></div>
+                    <h2>BSTATION <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('BSTATION', 'Privat 1 bulan', 'Rp40.000')">
+                        <div class="product-name">Privat 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi Bstation</div>
+                        <div class="product-price">Rp40.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== HBO MAX ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-play-circle"></i></div>
+                    <h2>HBO MAX <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('HBO MAX', 'Shering 1 bulan plan standar', 'Rp25.000')">
+                        <div class="product-name">Shering 1 bln standar <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing HBO Max standar</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('HBO MAX', 'Shering 1 bulan plan unlimited', 'Rp30.000')">
+                        <div class="product-name">Shering 1 bln unlimited <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing HBO Max unlimited</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('HBO MAX', 'Privat 1 bulan plan standar', 'Rp55.000')">
+                        <div class="product-name">Privat 1 bln standar <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun pribadi HBO Max standar</div>
+                        <div class="product-price">Rp55.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MELOLO ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-music"></i></div>
+                    <h2>MELOLO <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('MELOLO', 'Shering 1 bulan', 'Rp25.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Melolo</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== WATTPAD ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-book-open"></i></div>
+                    <h2>WATTPAD <span>Premium</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('WATTPAD', 'Shering 1 bulan', 'Rp20.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Wattpad Premium</div>
+                        <div class="product-price">Rp20.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== DRAMA BOX ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-film"></i></div>
+                    <h2>DRAMA BOX <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('DRAMA BOX', 'Shering 1 bulan', 'Rp15.000')">
+                        <div class="product-name">Shering 1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Drama Box</div>
+                        <div class="product-price">Rp15.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('DRAMA BOX', 'Shering 3 bulan', 'Rp25.000')">
+                        <div class="product-name">Shering 3 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Drama Box</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('DRAMA BOX', 'Shering 6 bulan', 'Rp35.000')">
+                        <div class="product-name">Shering 6 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun sharing Drama Box</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SPOTIFY ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fab fa-spotify"></i></div>
+                    <h2>SPOTIFY <span>Premium</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('SPOTIFY', 'Famplan akun seller 1 bulan', 'Rp30.000')">
+                        <div class="product-name">Famplan seller 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Spotify Famplan seller</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('SPOTIFY', 'Famplan akun seller 2 bulan', 'Rp53.000')">
+                        <div class="product-name">Famplan seller 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Spotify Famplan seller</div>
+                        <div class="product-price">Rp53.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('SPOTIFY', 'Famplan akun buyer 1 bulan', 'Rp32.000')">
+                        <div class="product-name">Famplan buyer 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Spotify Famplan buyer</div>
+                        <div class="product-price">Rp32.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('SPOTIFY', 'Famplan akun buyer 2 bulan', 'Rp55.000')">
+                        <div class="product-name">Famplan buyer 2 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Spotify Famplan buyer</div>
+                        <div class="product-price">Rp55.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== VIDIO ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fas fa-video"></i></div>
+                    <h2>VIDIO <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('VIDIO', 'Platinum TV Only 1 bulan', 'Rp30.000')">
+                        <div class="product-name">Platinum TV Only 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Vidio Platinum TV Only</div>
+                        <div class="product-price">Rp30.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIDIO', 'Platinum all device private 1 bulan', 'Rp45.000')">
+                        <div class="product-name">Platinum all device 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Vidio Platinum all device</div>
+                        <div class="product-price">Rp45.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                    <div class="product-card" onclick="waOrder('VIDIO', 'Platinum mobile private 1 bulan', 'Rp35.000')">
+                        <div class="product-name">Platinum mobile 1 bln <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun Vidio Platinum mobile</div>
+                        <div class="product-price">Rp35.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== YOUTUBE PREMIUM ===== -->
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="cat-icon"><i class="fab fa-youtube"></i></div>
+                    <h2>YOUTUBE PREMIUM <span>Streaming</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card" onclick="waOrder('YOUTUBE PREMIUM', '1 bulan', 'Rp25.000')">
+                        <div class="product-name">1 bulan <span class="badge">Full Garansi</span></div>
+                        <div class="product-detail">Akun YouTube Premium</div>
+                        <div class="product-price">Rp25.000</div>
+                        <span class="garansi-tag"><i class="fas fa-shield-alt"></i> Full Garansi</span>
+                        <button class="btn-wa"><i class="fab fa-whatsapp"></i> Order</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CTA BOTTOM ===== -->
+    <section class="section-cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Mau Order <span>Produk</span> Lainnya?</h2>
+                <p>Hubungi admin via WhatsApp untuk konsultasi atau order produk yang tidak ada di katalog.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
+                    <a href="https://wa.me/+6285113000221" target="_blank" class="btn-primary" style="background: #25D366; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);">
+                        <i class="fab fa-whatsapp"></i> Chat Admin
+                    </a>
+                    <a href="https://www.instagram.com/fiu_05_03?igsh=MXBmNnp5MHJtNjd2eQ==" target="_blank" class="btn-outline" style="border-color: #E4405F;">
+                        <i class="fab fa-instagram" style="color: #E4405F;"></i> Follow IG
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VbCs2NEB4hdbkjIKgf26" target="_blank" class="btn-outline" style="border-color: #25D366;">
+                        <i class="fab fa-whatsapp" style="color: #25D366;"></i> Channel WA
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===== MUSIC TOGGLE BUTTON ===== -->
+    <audio id="bgMusic" src="i.mp3" loop></audio>
+    <button id="musicToggle" aria-label="Toggle music">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">
+                &copy; 2026 <strong>FIUU STORE</strong> — APK Premium &amp; Suntik Sosmed
+            </div>
+            <div class="socials">
+                <a href="https://www.instagram.com/fiu_05_03?igsh=MXBmNnp5MHJtNjd2eQ==" target="_blank" class="instagram" aria-label="Instagram FIUU STORE">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbCs2NEB4hdbkjIKgf26" target="_blank" class="whatsapp-channel" aria-label="Channel WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // ===== HAMBURGER =====
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // ===== WHATSAPP ORDER =====
+        function waOrder(category, plan, price) {
+            const phone = '6285113000221';
+            const message = `Halo FIUU STORE, saya mau order:\n\n📌 *${category}*\n📋 ${plan}\n💰 ${price}\n\nApakah produknya masih ada?`;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // ===== SCROLL REVEAL =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== SMOOTH ANCHOR =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const offsetTop = target.getBoundingClientRect().top + window.scrollY - 70;
+                    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== PARTICLE SYSTEM =====
+        (function initParticles() {
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            const PARTICLE_COUNT = 100;
+            const MAX_SPEED = 0.3;
+            const CONNECTION_DIST = 100;
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * MAX_SPEED * 2;
+                    this.vy = (Math.random() - 0.5) * MAX_SPEED * 2;
+                    this.radius = Math.random() * 1.5 + 0.5;
+                    this.opacity = Math.random() * 0.3 + 0.1;
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                particles.push(new Particle());
+            }
+
+            function drawLines() {
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < CONNECTION_DIST) {
+                            const alpha = 1 - (dist / CONNECTION_DIST);
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.15})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                drawLines();
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        })();
+
+        // ===== SCROLL TO TOP =====
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            scrollBtn.classList.toggle('show', window.scrollY > 500);
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== RIPPLE EFFECT =====
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('.btn-wa')) return;
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                ripple.style.cssText = `
+                    position: absolute;
+                    top: ${y}px;
+                    left: ${x}px;
+                    width: ${size}px;
+                    height: ${size}px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, 0.12);
+                    transform: scale(0);
+                    animation: rippleAnim 0.6s ease-out forwards;
+                    pointer-events: none;
+                    z-index: 10;
+                `;
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 700);
+            });
+        });
+
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = `
+            @keyframes rippleAnim {
+                to {
+                    transform: scale(2.5);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+
+        // ===== MUSIC PLAYER =====
+        const audio = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+
+        audio.play().catch(() => {});
+
+        musicToggle.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                musicToggle.classList.add('playing');
+                musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                musicToggle.classList.remove('playing');
+                musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+            }
+        });
+
+        audio.addEventListener('pause', () => {
+            musicToggle.classList.remove('playing');
+            musicToggle.innerHTML = '<i class="fas fa-music"></i>';
+        });
+        audio.addEventListener('play', () => {
+            musicToggle.classList.add('playing');
+            musicToggle.innerHTML = '<i class="fas fa-pause"></i>';
+        });
+
+        console.log('✨ FIUU STORE — Tema biru aktif!');
+    </script>
+
+</body>
+</html>
